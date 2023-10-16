@@ -59,7 +59,7 @@
             <main id="content" role="main">
                 <h2 class="fs-3 fw-semibold mb-1 text-body-emphasis">Interested?</h2>
                 <p>Enter your details below and we’ll tell you more.</p>
-                <form action="#" id="enquiry-form" method="post" name="enquiry-form" data-netlify="true">
+                <form action="#" id="enquiry-form" method="post" name="enquiry-form" data-netlify="true" data-netlify-recaptcha="true">
                     <fieldset>
                         <div class="form-floating mb-3">
                             <input autocomplete="name" class="form-control" id="name" name="name" placeholder="Your name" required type="text">
@@ -73,6 +73,7 @@
                             <input autocomplete="email" class="form-control" id="email" name="email" placeholder="you@example.com" required type="email">
                             <label for="email">Your email address</label>
                         </div>
+                        <div data-netlify-recaptcha="true"></div>
                         <div class="d-grid">
                             <button class="btn btn-primary fw-medium py-2" type="submit">Submit</button>
                         </div>
