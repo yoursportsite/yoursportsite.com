@@ -61,21 +61,23 @@
                 <p>Enter your details below and we’ll tell you more.</p>
                 <form action="#" id="enquiry-form" method="post" name="enquiry-form" data-netlify="true" data-netlify-recaptcha="true">
                     <fieldset>
-                        <div class="form-floating mb-3">
-                            <input autocomplete="name" class="form-control" id="name" name="name" placeholder="Your name" required type="text">
-                            <label for="name">Your name</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input autocomplete="organization" class="form-control" id="organisation" name="organisation" placeholder="Name of club/league/organisation" required type="text">
-                            <label for="organisation">Name of club&thinsp;/&thinsp;league&thinsp;/&thinsp;organisation</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input autocomplete="email" class="form-control" id="email" name="email" placeholder="you@example.com" required type="email">
-                            <label for="email">Your email address</label>
-                        </div>
-                        <div data-netlify-recaptcha="true"></div>
-                        <div class="d-grid">
-                            <button class="btn btn-primary fw-medium py-2" type="submit">Submit</button>
+                        <div class="gap-3 vstack">
+                            <div class="form-floating">
+                                <input autocomplete="name" class="form-control" id="name" name="name" placeholder="Your name" required type="text">
+                                <label for="name">Your name</label>
+                            </div>
+                            <div class="form-floating">
+                                <input autocomplete="organization" class="form-control" id="organisation" name="organisation" placeholder="Name of club/league/organisation" required type="text">
+                                <label for="organisation">Name of club&thinsp;/&thinsp;league&thinsp;/&thinsp;organisation</label>
+                            </div>
+                            <div class="form-floating">
+                                <input autocomplete="email" class="form-control" id="email" name="email" placeholder="you@example.com" required type="email">
+                                <label for="email">Your email address</label>
+                            </div>
+                            <div data-netlify-recaptcha="true"></div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary fw-medium py-2" type="submit">Submit</button>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
