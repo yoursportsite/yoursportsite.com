@@ -1,0 +1,40 @@
+<div aria-hidden="true" aria-labelledby="enquiry-modal-label" class="fade modal" id="enquiry-modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h1 class="fs-5 modal-title" id="enquiry-modal-label">Get in touch</h1>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </header>
+            <div class="modal-body">
+                <form action="{% link thanks.html %}" data-netlify-recaptcha="true" data-netlify="true" id="enquiry-form" method="POST" name="Enquiry form" netlify-honeypot="organization_email">
+                    <div class="gap-3 vstack">
+                        <fieldset class="gap-3 vstack">
+                            <div>
+                                <label class="form-label" for="name">Your name</label>
+                                <input autocomplete="name" class="form-control" id="name" name="name" required type="text">
+                            </div>
+                            <div>
+                                <label class="form-label" for="email">Email address</label>
+                                <input autocomplete="email" class="form-control" id="email" name="email" required type="email">
+                            </div>
+                            <div>
+                                <label class="form-label" for="organization">Organisation name</label>
+                                <input autocomplete="organization" class="form-control" id="organization" name="organization" required type="text">
+                            </div>
+                            <div class="visually-hidden">
+                                <label for="organization_email">Organisation email address</label>
+                                <input name="organization_email" type="email">
+                            </div>
+                            <div>
+                                <div data-netlify-recaptcha="true"></div>
+                            </div>
+                        </fieldset>
+                        <div class="align-items-center d-flex justify-content-end">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

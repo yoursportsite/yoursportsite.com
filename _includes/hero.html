@@ -1,0 +1,17 @@
+<header class="bg-body hero position-relative text-body" data-bs-theme="dark">
+    <div class="bg-blur bottom-0 end-0 opacity-10 position-absolute start-0 top-0">
+        <div class="bg-cover bg-no-repeat bg-x-center bg-y-top bottom-0 end-0 position-absolute start-0 top-0" style="background-image: url({{ '/img/hero-bg.jpg' | relative_url }}); filter: grayscale(1);"></div>
+    </div>
+    <div class="container position-relative">
+        <div class="border-2 border-top py-5" style="--bs-border-color: rgba(var(--bs-white-rgb), .1);">
+            <div class="gy-5 row text-center text-md-start">
+                <div class="col-12 col-md-8 last-child-mb-0">
+                    {{ include.content }}
+                </div>
+                <!-- <div class="col-12 col-md-6">
+                    {{ include.image }}
+                </div> -->
+            </div>
+        </div>
+    </div>
+</header>

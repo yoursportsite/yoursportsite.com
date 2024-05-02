@@ -1,0 +1,13 @@
+<div class="d-flex flex-column gap-2">
+    <div class="flex-shrink-0">
+        <div class="fs-3 lh-sm" style="color: var(--bs-link-color);">
+            {% include bootstrap-icon.html name=include.icon %}
+        </div>
+    </div>
+    <div class="flex-grow-1">
+        <h3 class="fs-5 mb-2">{{ include.title }}</h3>
+        <div class="last-child-mb-0">
+            {{ include.content }}
+        </div>
+    </div>
+</div>

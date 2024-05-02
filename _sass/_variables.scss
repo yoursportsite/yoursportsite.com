@@ -1,0 +1,49 @@
+$prefix: bs-;
+
+$blue: #0d6efd;
+$green: #198754;
+
+$lime-green: #e0ee61;
+$dark-blue: #13192f;
+
+$primary: $lime-green;
+
+$spacer: 1rem;
+
+$component-active-bg: #61a8ed;
+
+$focus-ring-opacity: .25;
+$focus-ring-color: rgba($component-active-bg, $focus-ring-opacity);
+
+$border-color: hsl(hue($primary), 5%, 90%);
+
+$border-radius-sm: .25rem;
+$border-radius: $border-radius-sm;
+$border-radius-lg: $border-radius;
+
+$grid-gutter-width: $spacer;
+
+$container-padding-x: $grid-gutter-width * 2;
+
+$font-family-sans-serif: "Poppins", sans-serif;
+
+$body-bg-dark: $dark-blue;
+
+$body-color: hsl(hue($primary), 5%, 30%);
+
+$link-color: #97a142;
+
+$headings-color: hsl(hue($primary), 5%, 10%);
+$headings-font-weight: 700;
+
+$btn-font-weight: 500;
+$btn-transition: none;
+
+$form-label-font-weight: 500;
+
+$breadcrumb-font-size: .875rem;
+$breadcrumb-divider-color: var(--#{$prefix}secondary-color);
+$breadcrumb-active-color: var(--#{$prefix}body-color);
+$breadcrumb-divider: "\203a";
+
+$modal-backdrop-opacity: .8;

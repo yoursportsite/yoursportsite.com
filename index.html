@@ -1,0 +1,103 @@
+---
+excerpt: "Get a premium website for your sports club or league without a premium price tag."
+layout: default
+---
+{% capture content %}
+    <h1 class="mb-3 text-body-emphasis">Premier services for sports clubs and leagues without the premier price tag</h1>
+    <p class="mb-4" style="font-size: 1.125rem;">We have nearly two decades of experience in creating digital platforms for sports clubs and leagues of all sizes.</p>
+    <a class="btn btn-lg btn-outline-primary" href="#services">Find out more</a>
+{% endcapture %}
+{% capture image %}
+{% endcapture %}
+{% include hero.html content=content image=image %}
+<section class="mb-5" id="services">
+    <div class="container pt-5">
+        <header class="mb-4 text-start">
+            <h2 class="fs-3 mb-1">Services</h2>
+            <p class="mb-0">Your Sport Site is able to offer a range of services to sports clubs and sport leagues of all sizes. Our platform encompasses the following features and more.</p>
+        </header>
+        <div class="g-3 row row-cols-2">
+            <div class="col">
+                {% capture content %}
+                    <p>A professional website designed around the branding of your sports club or league. Your website will also look great across all devices such as desktop, tablet, and mobile.</p>
+                {% endcapture %}
+                {% include feature.html icon="window-fullscreen" title="Sports club website" content=content %}
+            </div>
+            <div class="col">
+                {% capture content %}
+                    <p>Keep your fans updated with an app on their Android or iOS device. Use notifications to delivery timely offers and promotions, and to inform them of latest developments and signings.</p>
+                {% endcapture %}
+                {% include feature.html icon="phone" title="Mobile app" content=content %}
+            </div>
+            <div class="col">
+                {% capture content %}
+                    <p>An e-commerce solution that not only allows you to sell tickets and merchandise on your website, but also in person at club shops and stadiums.</p>
+                {% endcapture %}
+                {% include feature.html icon="wallet2" title="Retail" content=content %}
+            </div>
+            <div class="col">
+                {% capture content %}
+                    <p>Allow your fans to create a single account that they use across your services. Import into your <abbr title="Customer Relationship Management">CRM</abbr> to get a single view on each fan.</p>
+                {% endcapture %}
+                {% include feature.html icon="people" title="Single sign on" content=content %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-5" id="faqs">
+    <div class="container">
+        <header class="mb-3 text-center">
+            <h2 class="mb-0">Frequently asked questions</h2>
+        </header>
+        <div class="accordion accordion-flush mx-auto" id="faq-accordion" style="max-width: 33.75rem;">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button aria-controls="faq-pricing" aria-expanded="false" class="accordion-button bg-transparent collapsed fw-medium text-body" data-bs-target="#faq-pricing" data-bs-toggle="collapse" type="button">
+                        <span>How much does it cost?</span>
+                    </button>
+                </h2>
+                <div id="faq-pricing" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body last-child-mb-0">
+                        <p>Design and set up is free. A subscription of &pound;19.99 per month is then required, which includes hosting and platform updates.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button aria-controls="faq-cancel" aria-expanded="false" class="accordion-button bg-transparent collapsed fw-medium text-body" data-bs-target="#faq-cancel" data-bs-toggle="collapse" type="button">
+                        <span>Can we cancel at any time?</span>
+                    </button>
+                </h2>
+                <div id="faq-cancel" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body last-child-mb-0">
+                        <p>We hope our service more than fulfills your needs, but should you wish to cancel then you may do so at any time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button aria-controls="faq-domain" aria-expanded="false" class="accordion-button bg-transparent collapsed fw-medium text-body" data-bs-target="#faq-domain" data-bs-toggle="collapse" type="button">
+                        <span>We already have a domain. Can we keep it?</span>
+                    </button>
+                </h2>
+                <div id="faq-domain" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body last-child-mb-0">
+                        <p>Absolutely! We will help you configure the settings needed to connect your domain to our service. You will retain ownership and control over your domain.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button aria-controls="faq-other" aria-expanded="false" class="accordion-button bg-transparent collapsed fw-medium text-body" data-bs-target="#faq-other" data-bs-toggle="collapse" type="button">
+                        <span>I have a question that’s not answered above</span>
+                    </button>
+                </h2>
+                <div id="faq-other" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body last-child-mb-0">
+                        <p>No problem. <a data-bs-toggle="modal" href="#enquiry-modal">Get in touch</a> and we will do our best to answer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
