@@ -22,7 +22,7 @@
 
             this.form.processing = true;
 
-            fetch('/thanks.html', {
+            fetch('/', {
                 body: new URLSearchParams(formData).toString(),
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -49,7 +49,7 @@
                 <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button" x-bind:disabled="form.processing"></button>
             </header>
             <div class="modal-body">
-                <form action="{% link thanks.html %}" data-netlify-recaptcha="true" data-netlify="true" id="enquiry-form" method="POST" name="Enquiry form" netlify-honeypot="organization_email" x-on:submit.prevent="submit" x-ref="form">
+                <form action="/" data-netlify-recaptcha="true" data-netlify="true" id="enquiry-form" method="POST" name="Enquiry form" netlify-honeypot="organization_email" x-on:submit.prevent="submit" x-ref="form">
                     <div class="gap-3 vstack">
                         <fieldset class="gap-3 vstack" x-bind:disabled="form.processing">
                             <div>
