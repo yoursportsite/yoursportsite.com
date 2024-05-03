@@ -13,3 +13,6 @@ exclude:
   - gemfiles/
   - node_modules/
   - vendor/*
+
+sass:
+  style: compressed
