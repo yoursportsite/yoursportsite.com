@@ -52,6 +52,7 @@
                 <form action="/" data-netlify-recaptcha="true" data-netlify="true" id="enquiry-form" method="POST" name="Enquiry form" netlify-honeypot="organization_email" x-on:submit.prevent="submit" x-ref="form">
                     <div class="gap-3 vstack">
                         <fieldset class="gap-3 vstack" x-bind:disabled="form.processing">
+                            <input type="hidden" name="form-name" value="Enquiry form">
                             <div>
                                 <label class="form-label" for="name">Your name</label>
                                 <input autocomplete="name" class="form-control" id="name" name="name" required type="text" x-ref="name">
