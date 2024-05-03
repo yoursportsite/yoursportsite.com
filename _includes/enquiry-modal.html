@@ -29,11 +29,13 @@
                 },
                 method: 'POST',
             }).then(function () {
-                console.log('Form submitted successfully.');
-
                 this.modal.hide();
 
                 this.$dispatch('notification', 'Thank you. We will be in touch soon.');
+
+                if ('gtag' in window) {
+                    gtag('event', 'generate_lead');
+                }
             }.bind(this)).catch(function (error) {
                 console.error('Error submitting form', error);
             }.bind(this));

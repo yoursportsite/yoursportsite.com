@@ -6,4 +6,9 @@
         gtag('js', new Date());
         gtag('config', 'G-TR2JEF28GE');
     </script>
+{% else %}
+    <script>
+        console.warn('Google Analytics not configured.');
+        function gtag(){console.log('gtag', arguments);}
+    </script>
 {% endif %}
