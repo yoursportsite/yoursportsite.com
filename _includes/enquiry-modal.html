@@ -1,17 +1,60 @@
-<div aria-hidden="true" aria-labelledby="enquiry-modal-label" class="fade modal" id="enquiry-modal" tabindex="-1">
+<div
+    aria-hidden="true"
+    aria-labelledby="enquiry-modal-label"
+    class="fade modal"
+    id="enquiry-modal"
+    tabindex="-1"
+    x-data="{
+        form: {
+            processing: false,
+        },
+        modal: null,
+        init() {
+            this.modal = window.bootstrap.Modal.getOrCreateInstance(this.$el);
+        },
+        reset() {
+            this.form.processing = false;
+
+            this.$refs.form.reset();
+        },
+        submit(event) {
+            var formData = new FormData(this.$refs.form);
+
+            this.form.processing = true;
+
+            fetch('/', {
+                body: formData,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                method: 'POST',
+            }).then(function () {
+                console.log('Form submitted successfully.');
+
+                this.modal.hide();
+
+                this.$dispatch('notification', 'Thank you. We will be in touch soon.');
+            }.bind(this)).catch(function (error) {
+                console.error('Error submitting form', error);
+            }.bind(this));
+        },
+    }"
+    x-on:hidden-bs-modal.dot="reset"
+    x-on:shown-bs-modal.dot="$refs.name.focus()"
+>
     <div class="modal-dialog">
         <div class="modal-content">
             <header class="modal-header">
                 <h1 class="fs-5 modal-title" id="enquiry-modal-label">Get in touch</h1>
-                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button" x-bind:disabled="form.processing"></button>
             </header>
             <div class="modal-body">
-                <form action="{% link thanks.html %}" data-netlify-recaptcha="true" data-netlify="true" id="enquiry-form" method="POST" name="Enquiry form" netlify-honeypot="organization_email">
+                <form action="{% link thanks.html %}" data-netlify-recaptcha="true" data-netlify="true" id="enquiry-form" method="POST" name="Enquiry form" netlify-honeypot="organization_email" x-on:submit.prevent="submit" x-ref="form">
                     <div class="gap-3 vstack">
-                        <fieldset class="gap-3 vstack">
+                        <fieldset class="gap-3 vstack" x-bind:disabled="form.processing">
                             <div>
                                 <label class="form-label" for="name">Your name</label>
-                                <input autocomplete="name" class="form-control" id="name" name="name" required type="text">
+                                <input autocomplete="name" class="form-control" id="name" name="name" required type="text" x-ref="name">
                             </div>
                             <div>
                                 <label class="form-label" for="email">Email address</label>
@@ -23,14 +66,24 @@
                             </div>
                             <div class="visually-hidden">
                                 <label for="organization_email">Organisation email address</label>
-                                <input name="organization_email" type="email">
+                                <input id="organization_email" name="organization_email" type="email">
                             </div>
                             <div>
                                 <div data-netlify-recaptcha="true"></div>
                             </div>
                         </fieldset>
                         <div class="align-items-center d-flex justify-content-end">
-                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button class="btn btn-primary" type="submit" x-bind:disabled="form.processing">
+                                <template x-cloak x-if="form.processing">
+                                    <span>
+                                        <span aria-hidden="true" class="spinner-border spinner-border-sm"></span>
+                                        <span>Submitting&hellip;</span>
+                                    </span>
+                                </template>
+                                <template x-if="!form.processing">
+                                    <span>Submit</span>
+                                </template>
+                            </button>
                         </div>
                     </div>
                 </form>
