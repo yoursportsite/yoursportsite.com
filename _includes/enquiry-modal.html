@@ -23,7 +23,7 @@
             this.form.processing = true;
 
             fetch('/', {
-                body: formData,
+                body: new URLSearchParams(formData).toString(),
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
