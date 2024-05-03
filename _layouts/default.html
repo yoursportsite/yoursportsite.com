@@ -50,5 +50,12 @@
         </footer>
         {% include enquiry-modal.html %}
         {% include toaster.html %}
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (el) {
+                    new window.bootstrap.Tooltip(el);
+                });
+            });
+        </script>
     </body>
 </html>
