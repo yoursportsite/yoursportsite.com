@@ -42,7 +42,27 @@
         </div>
         <footer class="flex-shrink-0" role="contentinfo">
             <div class="container">
-                <div class="border-2 border-top py-3 small text-body-secondary">
+                <div class="pb-3 small text-body-secondary text-center">
+                    <ul class="fs-5 list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://x.com/yoursportsite" rel="external nofollow" target="_blank" title="{{ site.title }} on X (formerly Twitter)">
+                                {% include bootstrap-icon.html name="twitter-x" %}
+                                <span class="visually-hidden">{{ site.title }} on X (formerly Twitter)</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/profile.php?id=100065296101888" rel="external nofollow" target="_blank" title="{{ site.title }} on Facebook">
+                                {% include bootstrap-icon.html name="facebook" %}
+                                <span class="visually-hidden">{{ site.title }} on Facebook</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/channel/UCbjcJnRe6h8C0mTxiYkkTwQ" rel="external nofollow" target="_blank" title="{{ site.title }} on YouTube">
+                                {% include bootstrap-icon.html name="youtube" %}
+                                <span class="visually-hidden">{{ site.title }} on YouTube</span>
+                            </a>
+                        </li>
+                    </ul>
                     <p class="mb-1">&copy; {{ 'now' | date: '%Y' }} Your Sport Site. All rights reserved.</p>
                     <p class="mb-0 opacity-75" style="font-size: .75rem;">Your Sport Site is a subsidiary of Your Fight Site <abbr title="Limited">Ltd</abbr>. Company number 10928224. Registered in England &amp; Wales.</p>
                 </div>
