@@ -8,9 +8,11 @@ plugins:
 exclude:
   - .jekyll-cache/
   - .sass-cache/
+  - Dockerfile
   - Gemfile
   - Gemfile.lock
   - gemfiles/
+  - Makefile
   - node_modules/
   - package-lock.json
   - package.json
