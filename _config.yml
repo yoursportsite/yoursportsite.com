@@ -3,7 +3,6 @@ locale: en_GB
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
 
 exclude:
   - .jekyll-cache/

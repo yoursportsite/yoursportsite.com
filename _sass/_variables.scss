@@ -46,4 +46,7 @@ $breadcrumb-divider-color: var(--#{$prefix}secondary-color);
 $breadcrumb-active-color: var(--#{$prefix}body-color);
 $breadcrumb-divider: "\203a";
 
+$dropdown-link-hover-color: darken($body-color, 20%);
+$dropdown-link-hover-bg: hsl(hue($primary), 10%, 90%);
+
 $modal-backdrop-opacity: .8;

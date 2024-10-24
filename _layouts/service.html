@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{% assign default_hero_title = page.activity | capitalize | append: ' websites' %}
+{% capture hero_content %}
+  <h1 class="mb-3 text-body-emphasis">{{ page.hero.title | default: default_hero_title }}</h1>
+  <p class="mb-0" style="font-size: 1.125rem;">Get a professionally-designed website for your {{ page.activity }} club to foster fan engagement, attract sponsors, and increase revenue.</p>
+  {% if page.features %}
+    <div class="mt-4">
+      <a class="btn btn-lg btn-outline-primary" href="#features">View features</a>
+    </div>
+  {% endif %}
+{% endcapture %}
+{%- if page.image -%}
+  {%- capture hero_image -%}
+    <img src="{{ page.image | relative_url }}" alt="{{ page.activity | capitalize }} website screenshot" class="d-block w-100">
+  {%- endcapture -%}
+{%- endif -%}
+{% include hero.html background=page.hero.background content=hero_content image=hero_image %}
+<section class="mb-5" id="features">
+  <div class="container pt-5">
+    <header class="gap-1 mb-4 vstack">
+      <h2 class="fs-3 mb-0">{{ page.activity | capitalize }} website features</h2>
+      <p class="mb-0">A {{ page.activity }} website from {{ site.title }} comes with the following features and more.</p>
+    </header>
+    {% if page.features %}
+      <div class="g-3 row row-cols-1 row-cols-md-2">
+        {% for feature in page.features %}
+          <div class="col">
+            {% include feature.html icon=feature.icon title=feature.title description=feature.description %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+<div class="container mb-5">
+  <div class="bg-body border-0 card rounded text-body" data-bs-theme="dark">
+    <div class="card-body p-5 text-center">
+      <p class="card-text fs-5 fw-bold mb-3 text-body-emphasis">{{ page.cta.headline | default: 'Ready to get started with a new website?' }}</p>
+      <a class="btn btn-outline-primary" data-bs-toggle="modal" href="#enquiry-modal">Get in touch</a>
+    </div>
+  </div>
+</div>

@@ -42,25 +42,25 @@ abbr[title] {
   }
 }
 
-.bi {
-  //
-}
-
 .bg-blur {
   backdrop-filter: blur(.5rem);
 }
 
-.hero {
-  .bg-cover::after {
-    content: "";
-    background-image: linear-gradient(to bottom, var(--bs-body-bg), transparent);
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 5rem;
+.dropdown-toggle-no-caret {
+  &::after {
+    display: none;
   }
+}
+
+.hero-background::after {
+  content: "";
+  background-image: linear-gradient(to bottom, var(--bs-body-bg), transparent);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3rem;
 }
 
 .last-child-mb-0 > :last-child {

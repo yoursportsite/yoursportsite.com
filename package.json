@@ -1,6 +1,6 @@
 {
-    "devDependencies": {
-        "bootstrap": "^5.3.3"
-    },
-    "private": true
+  "devDependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "private": true
 }
