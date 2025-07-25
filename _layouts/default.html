@@ -53,7 +53,7 @@
             <div class="offcanvas-body">
               <ul class="mb-3 mb-sm-0 me-auto navbar-nav">
                 <li class="dropdown nav-item">
-                  <a aria-expanded="false" class="{% if page.path == 'motorsport-websites.html' or page.path == 'football-websites.html' %}active {% endif %}dropdown-toggle dropdown-toggle-no-caret fw-medium nav-link" data-bs-toggle="dropdown" href="#" role="button">
+                  <a aria-expanded="false" class="{% if page.path == 'basketball-websites.html' or page.path == 'football-websites.html' or page.path == 'motorsport-websites.html' %}active {% endif %}dropdown-toggle dropdown-toggle-no-caret fw-medium nav-link" data-bs-toggle="dropdown" href="#" role="button">
                     <span>Services</span>
                     {% include bootstrap-icon.html name='chevron-down' %}
                   </a>
@@ -63,6 +63,9 @@
                     </li>
                     <li>
                       <a class="{% if page.path == 'motorsport-websites.html' %}active {% endif %}dropdown-item" href="{% link motorsport-websites.html %}">Motorsport websites</a>
+                    </li>
+                    <li>
+                      <a class="{% if page.path == 'basketball-websites.html' %}active {% endif %}dropdown-item" href="{% link basketball-websites.html %}">Basketball websites</a>
                     </li>
                   </ul>
                 </li>
