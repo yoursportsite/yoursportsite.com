@@ -34,7 +34,7 @@
   </head>
   <body class="d-flex flex-column min-vh-100">
     <header class="flex-shrink-0" role="banner">
-      <nav class="bg-body navbar navbar-expand-sm py-3 text-body" data-bs-theme="dark">
+      <nav class="bg-body navbar navbar-expand-md py-3 text-body" data-bs-theme="dark">
         <div class="container">
           {% assign logo = page.logo | default: 'soccer' %}
           {% assign logo_1x = '/img/logo-' | append: logo | append: '@1x.png' %}
@@ -51,7 +51,7 @@
               <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
-              <ul class="mb-3 mb-sm-0 me-auto navbar-nav">
+              <ul class="mb-3 mb-md-0 me-auto navbar-nav">
                 <li class="dropdown nav-item">
                   <a aria-expanded="false" class="{% if page.path == 'basketball-websites.html' or page.path == 'football-websites.html' or page.path == 'motorsport-websites.html' %}active {% endif %}dropdown-toggle dropdown-toggle-no-caret fw-medium nav-link" data-bs-toggle="dropdown" href="#" role="button">
                     <span>Services</span>
@@ -69,8 +69,22 @@
                     </li>
                   </ul>
                 </li>
+                <li class="dropdown nav-item">
+                  <a aria-expanded="false" class="{% if page.path == 'football/competitions/index.html' or page.layout == 'league-table' %}active {% endif %}dropdown-toggle dropdown-toggle-no-caret fw-medium nav-link" data-bs-toggle="dropdown" href="#" role="button">
+                    <span>Sports</span>
+                    {% include bootstrap-icon.html name='chevron-down' %}
+                  </a>
+                  <ul class="dropdown-menu" data-bs-theme="light">
+                    <li>
+                      <h6 class="dropdown-header">Football</h6>
+                    </li>
+                    <li>
+                      <a class="{% if page.path == 'football/competitions/index.html' or page.layout == 'league-table' %}active {% endif %}dropdown-item" href="{% link football/competitions/index.html %}">Football league tables</a>
+                    </li>
+                  </ul>
+                </li>
               </ul>
-              <div class="d-grid d-sm-block ms-auto">
+              <div class="d-grid d-md-block ms-auto">
                 <a class="btn btn-outline-primary" data-bs-toggle="modal" href="#enquiry-modal">Get in touch</a>
               </div>
             </div>

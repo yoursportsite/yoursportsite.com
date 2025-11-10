@@ -12,8 +12,12 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
+    ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-aarch64-linux-musl)
     forwardable-extended (2.6.0)
+    google-protobuf (4.31.1-aarch64-linux-gnu)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.31.1-aarch64-linux-musl)
       bigdecimal
       rake (>= 13)
@@ -39,8 +43,6 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
-    jekyll-feed (0.17.0)
-      jekyll (>= 3.7, < 5.0)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
     jekyll-watch (2.2.1)
@@ -74,11 +76,11 @@ GEM
     webrick (1.9.1)
 
 PLATFORMS
+  aarch64-linux
   aarch64-linux-musl
 
 DEPENDENCIES
   jekyll
-  jekyll-feed
   webrick
 
 BUNDLED WITH

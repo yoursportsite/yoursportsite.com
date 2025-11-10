@@ -46,10 +46,34 @@ abbr[title] {
   backdrop-filter: blur(.5rem);
 }
 
+.dropdown-header {
+  font-weight: 500;
+}
+
 .dropdown-toggle-no-caret {
   &::after {
     display: none;
   }
+}
+
+.form-indicator {
+  font-size: .875rem;
+  line-height: 1.5rem;
+  text-align: center;
+  display: inline-block;
+  width: 1.5rem;
+}
+.form-indicator-won {
+  color: $white;
+  background-color: $success;
+}
+.form-indicator-lost {
+  color: $white;
+  background-color: $danger;
+}
+.form-indicator-drawn {
+  color: $white;
+  background-color: $secondary;
 }
 
 .hero-background::after {
@@ -81,6 +105,14 @@ abbr[title] {
   li + li {
     margin-top: .25rem;
   }
+}
+
+.table-league td {
+  vertical-align: middle;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
 }
 
 .toast {
