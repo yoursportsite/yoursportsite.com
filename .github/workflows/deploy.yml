@@ -1,0 +1,16 @@
+name: Deploy
+
+on:
+  schedule:
+    - cron: '0 22 * * 2' # Tuesdays at 22:00
+    - cron: '0 17 * * 6' # Saturdays at 17:00
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy
+        run: curl -X POST '${{ secrets.NETLIFY_BUILD_HOOK }}'
