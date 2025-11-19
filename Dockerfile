@@ -9,7 +9,7 @@ RUN bundle install
 
 COPY . .
 
-EXPOSE 4000
+EXPOSE 80
 
 ENTRYPOINT [ "bundle", "exec", "jekyll" ]
-CMD [ "serve", "--host", "0.0.0.0", "--port", "4000", "--watch" ]
+CMD [ "serve", "--host", "0.0.0.0", "--port", "80", "--watch" ]

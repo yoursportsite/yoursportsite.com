@@ -12,10 +12,10 @@ build:
 	$(DOCKER) build --tag $(TAG) .
 
 serve:
-	$(DOCKER) run --publish 4000:4000 --rm --tty --volume $(shell pwd):/usr/src/app --workdir /usr/src/app $(TAG)
+	$(DOCKER) run --name yoursportsite --publish 80:80 --rm --tty --volume $(shell pwd):/usr/src/app --workdir /usr/src/app $(TAG)
 
 deploy:
 	npm install
-	bin/premier-league-table.rb
-	bin/national-league-tables.rb
+	bin/football/efl-league-tables.rb
+	bin/football/national-league-tables.rb
 	bundle exec jekyll build

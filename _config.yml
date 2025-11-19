@@ -4,10 +4,12 @@ locale: en_GB
 exclude:
   - .jekyll-cache/
   - .sass-cache/
+  - bin/
   - Dockerfile
   - Gemfile
   - Gemfile.lock
   - gemfiles/
+  - lib/
   - Makefile
   - node_modules/
   - package-lock.json
@@ -15,4 +17,9 @@ exclude:
   - vendor/*
 
 sass:
+  silence_deprecations:
+    - color-functions
+    - global-builtin
+    - import
+    - mixed-decls
   style: compressed
