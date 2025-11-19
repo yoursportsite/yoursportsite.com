@@ -70,7 +70,7 @@
                   </ul>
                 </li>
                 <li class="dropdown nav-item">
-                  <a aria-expanded="false" class="{% if page.path == 'football/competitions/index.html' or page.layout == 'league-table' %}active {% endif %}dropdown-toggle dropdown-toggle-no-caret fw-medium nav-link" data-bs-toggle="dropdown" href="#" role="button">
+                  <a aria-expanded="false" class="{% if page.layout == 'league-table' or page.nav == 'sports' %}active {% endif %}dropdown-toggle dropdown-toggle-no-caret fw-medium nav-link" data-bs-toggle="dropdown" href="#" role="button">
                     <span>Sports</span>
                     {% include bootstrap-icon.html name='chevron-down' %}
                   </a>
@@ -79,7 +79,7 @@
                       <h6 class="dropdown-header">Football</h6>
                     </li>
                     <li>
-                      <a class="{% if page.path == 'football/competitions/index.html' or page.layout == 'league-table' %}active {% endif %}dropdown-item" href="{% link football/competitions/index.html %}">Football league tables</a>
+                      <a class="{% if page.layout == 'league-table' or page.nav == 'sports' %}active {% endif %}dropdown-item" href="{% link football/competitions/index.html %}">Football league tables</a>
                     </li>
                   </ul>
                 </li>

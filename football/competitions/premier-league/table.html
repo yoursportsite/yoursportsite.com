@@ -1,0 +1,77 @@
+---
+layout: page
+nav: sports
+title: Premier League table
+---
+<h1 class="mb-2">Premier League table</h1>
+<div class="table-responsive">
+  <table class="table table-league">
+    <thead>
+      <tr>
+        <th class="pe-0" scope="col">
+          <span class="visually-hidden">Position</span>
+        </th>
+        <th scope="col">Team</th>
+        <th scope="col">
+          <abbr title="Played">Pl</abbr>
+        </th>
+        <th scope="col">
+          <abbr title="Won">W</abbr>
+        </th>
+        <th scope="col">
+          <abbr title="Drawn">D</abbr>
+        </th>
+        <th scope="col">
+          <abbr title="Lost">L</abbr>
+        </th>
+        <th scope="col">
+          <abbr title="Goals for">GF</abbr>
+        </th>
+        <th scope="col">
+          <abbr title="Goals against">GA</abbr>
+        </th>
+        <th scope="col">
+          <abbr title="Goal difference">GD</abbr>
+        </th>
+        <th scope="col">
+          <abbr title="Points">Pts</abbr>
+        </th>
+        <th scope="col">Form</th>
+      </tr>
+    </thead>
+    <tbody class="tabular-nums">
+      {% for standing in site.data.football.competitions.premier-league.body.leagueTable.teamStandings %}
+        <tr>
+          <td class="pe-0" style="width: 1%;">{{ standing.position }}</td>
+          <td class="fw-bold">{{ standing.teamName }}</td>
+          <td style="width: 1%;">{{ standing.played }}</td>
+          <td style="width: 1%;">{{ standing.won }}</td>
+          <td style="width: 1%;">{{ standing.drawn }}</td>
+          <td style="width: 1%;">{{ standing.lost }}</td>
+          <td style="width: 1%;">{{ standing.goalsFor }}</td>
+          <td style="width: 1%;">{{ standing.goalsAgainst }}</td>
+          <td style="width: 1%;">{{ standing.goalsFor | minus: standing.goalsAgainst }}</td>
+          <td style="width: 1%;">{{ standing.points }}</td>
+          <td style="width: 1%;">
+            <ul class="column-gap-1 d-flex flex-nowrap form-list list-unstyled mb-0">
+              {% for result in standing.form %}
+                <li class="d-flex form-list-item">
+                  {% case result %}
+                    {% when "win" %}
+                      <abbr class="form-indicator form-indicator-won" title="Won">W</abbr>
+                    {% when "loss" %}
+                      <abbr class="form-indicator form-indicator-lost" title="Lost">L</abbr>
+                    {% when "draw" %}
+                      <abbr class="form-indicator form-indicator-drawn" title="Drawn">D</abbr>
+                  {% endcase %}
+                </li>
+              {% endfor %}
+            </ul>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% assign last_updated = site.data.football.competitions.premier-league.body.importUTCDateTime %}
+<p class="small text-body-secondary">Last updated <time datetime="{{ last_updated | date_to_xmlschema }}">{{ last_updated | date_to_long_string: 'ordinal', 'GB' }}</time></p>
